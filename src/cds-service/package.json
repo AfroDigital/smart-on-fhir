@@ -1,0 +1,20 @@
+{
+  "name": "cds-service",
+  "version": "1.0.0",
+  "description": "This is a mock cds service",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Adedayo Adebiyi",
+  "license": "MKIT",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "prettier": "^2.7.1",
+    "uuid": "^8.3.2",
+    "winston": "^3.8.1"
+  }
+}

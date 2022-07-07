@@ -1,0 +1,22 @@
+{ 
+    "name" : "EHR Smart Assistant",
+    "description": "A Smart Assistant for Electronic Health Records",
+    "version" : "1.0",
+    "manifest_version": 3,
+    "background":{
+        "service_scripts" : "/scripts/background.js"
+    },
+    "permissions" :["storage"],
+    "action" :{
+        "default_icon": {
+            "16": "/assets/images/logos/ehr_logo16.png",
+            "32": "/assetsimages/logos/ehr_logo32.png",
+            "48": "/assets/images/logos/ehr_logo48.png"
+          }
+    },
+    "icons": {
+        "16": "/assets/images/logos/ehr_logo16.png",
+        "32": "/assets/images/logos/ehr_logo32.png",
+        "48": "/assets/images/logos/ehr_logo48.png"
+      }
+}
