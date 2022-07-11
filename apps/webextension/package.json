@@ -1,0 +1,44 @@
+{
+  "name": "react-smart-on-fhir-webextension",
+  "version": "0.1.0",
+  "description": "A web extension",
+  "source": "manifest.json",
+  "scripts": {
+    "npm:install:global": "npm install --location=global yarn",
+    "setup": "npm run npm:install:global",
+    "standard": "standard --fix src/**/*.js src/**/*.jsx",
+    "lint:js": "npm run standard",
+    "lint": "npm run lint:js",
+    "preparcel": "npm run lint",
+    "parcel": "parcel",
+    "parcel:watch": "npm run parcel -- watch src/manifest.json --host localhost",
+    "parcel:build": "npm run parcel -- build src/manifest.json",
+    "dev": "npm run parcel:watch",
+    "dist": "npm run parcel:build",
+    "test": "exit 0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "author": "percebus",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "devDependencies": {
+    "@parcel/config-webextension": "^2.6.2",
+    "@parcel/transformer-less": "^2.6.2",
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "latest",
+    "process": "^0.11.10",
+    "standard": "latest"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "antd": "^4.21.4",
+    "lodash": "^4.17.21",
+    "rc-drawer": "^4.4.3",
+    "react-dom": "^18.2.0",
+    "react-lodash": "^0.1.2",
+    "web-vitals": "^2.1.4"
+  }
+}

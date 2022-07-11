@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "react-smart-on-fhir-webextension",
+  "version": "0.1.0",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "./background/service_worker.jsx",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "./popup/index.html"
+  },
+  "options_ui": {
+    "page": "./options/index.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "run_at": "document_idle",
+      "css": [
+        "./content/index.scss"
+      ],
+      "js": [
+        "../node_modules/lodash/lodash.min.js",
+        "./content/index.jsx"
+      ]
+    }
+  ]
+}
