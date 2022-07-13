@@ -1,0 +1,13 @@
+[
+   
+    {
+      "id": "patient-recommender",
+      "title": "Patient Recommender",
+      "description": "Display a recommender app for patient based on vitals",
+      "hook": "patient-view",
+      "prefetch": {
+        "patient": "Patient/{{context.patientId}}"
+      }
+    }
+  ]
+  
