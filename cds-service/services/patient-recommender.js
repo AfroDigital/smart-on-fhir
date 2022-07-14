@@ -5,7 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 const router = express.Router();
 
 const isDataAvailable = (patient) => {
-
+  console.log(patient);
   return patient.name && patient.name[0] && patient.name[0].given && patient.name[0].given[0];
 
 }
